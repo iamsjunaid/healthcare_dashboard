@@ -219,3 +219,87 @@ function setHealthStatus(patientData) {
     heartCondition.innerHTML = heart_rate.levels;
   }
 }
+
+function setDiagnosticList(patientData) {
+  // Assuming the structure of diagnosis_list is consistent and non-empty
+  const diagnosisList = patientData.diagnostic_list;
+
+  // Select DOM element
+  const diagnosticList = document.querySelector(".diagnostic_list");
+
+  const table = document.createElement("table");
+  table.classList.add("diagnosis_table");
+
+  const thead = document.createElement("thead");
+  thead.innerHTML = `
+      <tr class="diagnosis_table_header">
+          <th>Diagnosis</th>
+          <th>Description</th>
+          <th>Status</th>
+      </tr>`;
+  table.appendChild(thead);
+
+  const tbody = document.createElement("tbody");
+  diagnosisList.forEach((diagnosis) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+          <td>${diagnosis.name}</td>
+          <td>${diagnosis.description}</td>
+          <td>${diagnosis.status}</td>`;
+      tbody.appendChild(row);
+  });
+
+  table.appendChild(tbody);
+  diagnosticList.appendChild(table);
+}
+
+function setPatientInfo(patientData) {
+  const patientInfo = document.querySelector(".patient_info");
+
+  patientInfo.innerHTML = 
+  `
+  <div class="patient_info_section">
+    <img src="${patientData.profile_picture}" alt="patient profile pic"/>
+    <h2>${patientData.name}</h2>
+    <div class="patient_info_subsection"
+      <div class="dob">
+      <div class="dob_img_container">
+        <img src="./images/BirthIcon.svg" alt="dob icon"/>
+        <div class="dob_container">
+          <p>Date of Birth</p>
+          <p>${patientData.date_of_birth}</p>
+        </div>
+      </div>
+      <div>
+      <div class="gender_img_container">
+        <img src="./images/FemaleIcon.svg" alt="female icon"/>
+        <div class="gender_container">
+          <p>Gender</p>
+          <p>${patientData.gender}</p>
+        </div>
+      </div>
+      <div class="contact_img_container">
+        <img src="./images/ContactIcon.svg" alt="contact icon"/>
+        <div class="contact_container">
+          <p>Contact Info.</p>
+          <p>${patientData.phone_number}</p>
+        </div>
+      </div>
+      <div class="emergency_img_container">
+        <img src="./images/ContactIcon.svg" alt="emergency icon"/>
+        <div class="emergency_container">
+          <p>Emergency Contacts</p>
+          <p>${patientData.emergency_contact}</p>
+        </div>
+      </div>
+      <div class="insurance_img_container">
+        <img src="./images/InsuranceIcon.svg" alt="insurance icon"/>
+        <div class="insurance_container">
+          <p>Insurance Provider</p>
+          <p>${patientData.insurance_type}</p>
+        </div>
+      </div>
+      <button class="patient_info_btn">Show All Information</button>
+    </div>
+  `;
+};
