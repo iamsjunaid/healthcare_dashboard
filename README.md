@@ -32,12 +32,17 @@ To get a local copy up and running, follow these simple steps.
 1. Clone the repo
     ```sh
     git clone https://github.com/iamsjunaid/healthcare_dashboard.git
+    ```
 2. Navigate to the project directory
 3. Open `index.html` in your web browser to view the project
 
 ## Usage
 
 After installation, you can use the healthcare_dashboard website by navigating through its various sections via the navigation bar. Each section is designed to provide specific functionalities such as managing patient records, scheduling appointments, and much more.
+
+## Live Demo Link
+
+Check out the live demo of the healthcare_dashboard [here](https://healthcare-dashboard.onrender.com/).
 
 ## Contributing
 
