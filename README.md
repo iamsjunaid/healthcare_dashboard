@@ -62,8 +62,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - Your Name - [sjunaid626@gmail.com](mailto:your_email@example.com)
 - Project Link: [https://github.com/iamsjunaid/healthcare_dashboard](https://github.com/iamsjunaid/healthcare_dashboard)
-
-## Acknowledgements
-
-- Thanks to all the contributors who invest their time into making healthcare_dashboard better.
-- Special thanks to open-source projects that make this software possible.
