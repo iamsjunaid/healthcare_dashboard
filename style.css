@@ -25,3 +25,37 @@ body {
   font-size: small;
 }
 
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+
+.links a {
+  color: #072635;
+  text-decoration: none;
+  /* color: #000; */
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.links a:hover {
+  background: var(--activestate_bg_1) 0% 0% no-repeat padding-box;
+  background: #01f0d0 0% 0% no-repeat padding-box;
+  border-radius: 41px;
+  opacity: 1;
+}
+
+.profile i {
+  text-decoration: none;
+  /* color: #000; */
+}
+
+.links a,
+.profile a,
+.icons {
+  color: #072635;
+}
+
