@@ -104,3 +104,30 @@ body {
   margin-right: -6rem;
 }
 
+.main_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  /* grid-gap: 20px; */
+  font-size: small;
+  width: 100%;
+}
+
+.main_container aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* background: #ffffff 0% 0% no-repeat padding-box; */
+  border-radius: 16px;
+  opacity: 1;
+  padding: 0 16px;
+  /* height: 90vh; */
+}
+
+
