@@ -210,5 +210,69 @@ aside {
   margin: 2px;
 }
 
+.chart_container {
+  width: 480px;
+  height: 240px;
+}
+
+#bloodPressureChart h4 {
+  border: 2px solid red;
+  color: red;
+}
+
+.diagnosis_chart_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #f0f0f0;
+  padding: 5px;
+  border-radius: 16px;
+  margin: 5px;
+}
+
+.sys_dia_count_contaier {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 10rem;
+  justify-content: center;
+}
+
+.bp_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.horiz_bar {
+  width: 100%; /* Full width */
+  height: 1px; /* Adjust the height as needed */
+  background-color: #9c9c9c; /* Choose your color */
+}
+
+.circle {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+.pink {
+  border: rgba(255, 99, 132, 1);
+  background-color: rgba(255, 99, 132, 0.2);
+}
+
+.blue {
+  border: rgba(54, 162, 235, 1);
+  background-color: rgba(54, 162, 235, 0.2);
+}
+
+.high_bp,
+.low_bp {
+  font-size: medium;
+  font-weight: bold;
+}
+
 
 
