@@ -160,3 +160,24 @@ function createBloodPressureChart(patientData) {
     options: chartOptions,
   });
 }
+
+function setBPCount(patientData) {
+  // get the highest blood pressure reading
+  const highestSystolicReading = Math.max(
+    ...patientData.diagnosis_history.map(
+      (diagnosis) => diagnosis.blood_pressure.systolic.value
+    )
+  );
+  // get the lowest blood pressure reading
+  const lowestDiastolicReading = Math.min(
+    ...patientData.diagnosis_history.map(
+      (diagnosis) => diagnosis.blood_pressure.diastolic.value
+    )
+  );
+
+  const sysReading = document.querySelector(".high_bp");
+  const diaReading = document.querySelector(".low_bp");
+
+  sysReading.innerHTML = highestSystolicReading;
+  diaReading.innerHTML = lowestDiastolicReading;
+}
