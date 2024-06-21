@@ -41,3 +41,19 @@ async function getPatientData() {
     .catch((error) => console.error("Error:", error));
 }
 
+function setData(data) {
+  patients_data = data;
+  const patients_list = document.querySelector(".patients_list");
+  patients_list.innerHTML = `
+    <div class="patient">
+        <img src="${data.profile_picture}" alt="Avatar" />
+        <div class="patient_demographics">
+            <p class="name">${data.name}</p>
+            <p class="gender">${data.gender}, ${data.age}</p>
+        </div>
+    </div>
+    <div>
+        <i class="material-icons">more_horiz</i>
+     </div>
+    `;
+}
