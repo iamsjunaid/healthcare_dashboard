@@ -181,3 +181,41 @@ function setBPCount(patientData) {
   sysReading.innerHTML = highestSystolicReading;
   diaReading.innerHTML = lowestDiastolicReading;
 }
+
+function setHealthStatus(patientData) {
+  // Assuming the structure of diagnosis_history is consistent and non-empty
+  const diagnosis = patientData.diagnosis_history[0];
+
+  // Extract values
+  const resp_rate = diagnosis.respiratory_rate;
+  const temp = diagnosis.temperature;
+  const heart_rate = diagnosis.heart_rate;
+
+  // Select DOM elements
+  const respRate = document.querySelector("#resp_rate");
+  const respCondition = document.querySelector("#resp_condition");
+  const tempRate = document.querySelector("#temp");
+  const tempCondition = document.querySelector("#temp_condition");
+  const heartRate = document.querySelector("#heart_rate");
+  const heartCondition = document.querySelector("#heart_condition");
+
+  // Check if elements exist before setting innerHTML
+  if (respRate) {
+    respRate.innerHTML = resp_rate.value + "<span> bpm</span>";
+  }
+  if (respCondition) {
+    respCondition.innerHTML = resp_rate.levels;
+  }
+  if (tempRate) {
+    tempRate.innerHTML = temp.value + "<span> °C</span>";
+  }
+  if (tempCondition) {
+    tempCondition.innerHTML = temp.levels;
+  }
+  if (heartRate) {
+    heartRate.innerHTML = heart_rate.value + "<span> bpm</span>";
+  }
+  if (heartCondition) {
+    heartCondition.innerHTML = heart_rate.levels;
+  }
+}
