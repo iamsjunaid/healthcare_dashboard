@@ -153,4 +153,21 @@ aside {
   width: 100%;
 }
 
+.diagnosis_container {
+  height: auto;
+  background-color: #fff;
+  padding: 5px;
+}
+
+.diagnosis_container > h2,
+.diagnostic_list > h2,
+.lab_results > h2 {
+  text-align: left;
+  margin: 10px 0;
+}
+
+.dignosis_main_container {
+  width: 44rem;
+}
+
 
