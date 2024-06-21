@@ -2,7 +2,7 @@
 
 ## Overview
 
-healthcare_dashboard is a modern web application designed for healthcare professionals and patients. It provides a comprehensive platform for managing patient information, scheduling appointments, messaging, and handling transactions.
+This project involves creating a web application to fetch and display patient data securely, including health metrics such as heart rate, respiratory rate, and blood pressure, specifically for a patient named Jessica Taylor. Utilizing Vite for the build process, the project employs environment variables to securely manage sensitive information like
 
 ## Features
 
