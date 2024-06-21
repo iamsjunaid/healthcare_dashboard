@@ -143,4 +143,14 @@ aside {
   height: 132.5vh;
 }
 
+.patient_search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  opacity: 1;
+  margin: 5px;
+  width: 100%;
+}
+
 
