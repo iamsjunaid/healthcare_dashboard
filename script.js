@@ -57,3 +57,106 @@ function setData(data) {
      </div>
     `;
 }
+
+function createBloodPressureChart(patientData) {
+  // Extract blood pressure readings for Chart.js
+  const labels = patientData.diagnosis_history.map(
+    (diagnosis) => `${diagnosis.month} ${diagnosis.year}`
+  );
+  const systolicReadings = patientData.diagnosis_history.map(
+    (diagnosis) => diagnosis.blood_pressure.systolic.value
+  );
+  const diastolicReadings = patientData.diagnosis_history.map(
+    (diagnosis) => diagnosis.blood_pressure.diastolic.value
+  );
+
+  // Create the datasets for the chart
+  const chartData = {
+    labels: labels,
+    datasets: [
+      {
+        label: "Systolic",
+        data: systolicReadings,
+        borderColor: "rgba(255, 99, 132, 1)",
+        backgroundColor: "rgba(255, 99, 132, 0.2)",
+        fill: false,
+        yAxisID: "y",
+      },
+      {
+        label: "Diastolic",
+        data: diastolicReadings,
+        borderColor: "rgba(54, 162, 235, 1)",
+        backgroundColor: "rgba(54, 162, 235, 0.2)",
+        fill: false,
+        yAxisID: "y",
+      },
+    ],
+  };
+
+  // Define chart options
+  const chartOptions = {
+    scales: {
+      y: {
+        beginAtZero: false,
+        title: {
+          display: true,
+          text: "Blood Pressure (mmHg)",
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        display: true,
+        labels: {
+          usePointStyle: true,
+          pointStyle: "circle",
+        },
+      },
+      title: {
+        display: true,
+        text: "Blood Pressure Over Time",
+        align: "start",
+        padding: {
+          top: 10,
+          bottom: 30,
+        },
+      },
+      annotation: {
+        annotations: {
+          line1: {
+            type: "line",
+            yMin: 160,
+            yMax: 160,
+            borderColor: "rgba(255, 99, 132, 0.5)",
+            borderWidth: 1,
+            label: {
+              content: "Higher than Average",
+              enabled: true,
+              position: "end",
+            },
+          },
+          line2: {
+            type: "line",
+            yMin: 78,
+            yMax: 78,
+            borderColor: "rgba(54, 162, 235, 0.5)",
+            borderWidth: 1,
+            label: {
+              content: "Lower than Average",
+              enabled: true,
+              position: "end",
+            },
+          },
+        },
+      },
+    },
+  };
+
+  // Get context and create Chart
+  const ctx = document.getElementById("bloodPressureChart").getContext("2d");
+  new Chart(ctx, {
+    type: "line",
+    data: chartData,
+    options: chartOptions,
+  });
+}
