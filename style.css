@@ -97,3 +97,10 @@ body {
   height: 48px;
 }
 
+.vert_bar{
+  width: 1px;
+  height: 48px;
+  background-color: #9c9c9c;
+  margin-right: -6rem;
+}
+
