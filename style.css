@@ -342,6 +342,37 @@ aside {
 }
 
 .diagnosis_table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  border-radius: 16px;
+
+}
+
+.diagnosis_table_header {
+  background-color: #f0f0f0;
+}
+
+.diagnosis_table_header th:nth-child(1) {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.diagnosis_table_header th:nth-child(3) {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+td {
+  border-bottom: 1px solid #f0f0f0;
+
+}
 
 
 
