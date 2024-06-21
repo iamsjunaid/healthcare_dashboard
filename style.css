@@ -11,3 +11,17 @@ body {
 .container {
   height: 100vh;
 }
+
+.container nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 70px;
+  opacity: 1;
+  width: auto;
+  padding: 8px 16px;
+  font-size: small;
+}
+
