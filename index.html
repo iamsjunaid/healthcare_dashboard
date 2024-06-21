@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech.Health</title>
+  <link rel="icon" href="./images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <div>
+        <img src="./images/logo.svg" alt="tech-care-logo" />
+      </div>
+      <div class="links">
+        <a href="/home"><i class="material-icons icons">home</i>Overview</a>
+        <a href="/home"><i class="material-icons icons">people</i>Patients</a>
+        <a href="/home"><i class="material-icons icons">calendar_today</i>Schedule</a>
+        <a href="/home"><i class="material-icons icons">chat_bubble</i>Message</a>
+        <a href="/home"><i class="material-icons icons">credit_card</i>Transactions</a>
+      </div>
+      <div class="doc_img_info_container">
+        <img src="./images/doc.png" alt="Doctor Image">
+        <div class="doc_info_container">
+          <p>Dr. John Doe</p>
+          <p>General Practitioner</p>
+        </div>
+      </div>
+      <div class="vert_bar"></div>
+      <div class="profile">
+        <a href="/home"><i class="material-icons icons">settings</i></a>
+        <a href="/home"><i class="material-icons icons">more_vert</i></a>
+      </div>
+    </nav>
+    <main class="main_container">
+      <aside class="top_left">
+        <div class="patient_search">
+          <h2>Patients</h2>
+          <i class="material-icons">search</i>
+        </div>
+        <div class="patients_list">
+        </div>
+      </aside>
+      <div class="dignosis_main_container">
+        <aside class="diagnosis_container">
+          <h2>Diagnosis History</h2>
+          <div class="diagnosis_chart_container">
+            <div class="chart_container">
+              <canvas id="bloodPressureChart" width="200" height="100"></canvas>
+            </div>
+            <div class="sys_dia_count_contaier">
+              <div>
+                <h3><span class="circle pink"></span>Systolic</h3>
+                <p class="high_bp"></p>
+                <div class="bp_container">
+                  <i class="material-icons">arrow_drop_up</i>
+                  <span>Higher than average</span>
+                </div>
+              </div>
+              <div class="horiz_bar"></div>
+              <div>
+                <h3>
+                  <span class="circle blue">
+                  </span>
+                  Diastolic
+                </h3>
+                <p class="low_bp"></p>
+                <div class="bp_container">
+                  <i class="material-icons">arrow_drop_down</i>
+                  <span>Lower than average</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card resp_rate">
+              <img src="./images/resp_rate.svg" alt="Respiratory Rate">
+              <p>Respiratory Rate</p>
+              <p id="resp_rate"></p>
+              <p id="resp_condition"></p>
+            </div>
+            <div class="card temp">
+              <img src="./images/temperature.svg" alt="Temperature">
+              <p>Temperature</p>
+              <p id="temp"></p>
+              <p id="temp_condition"></p>
+            </div>
+            <div class="card heart_rate">
+              <img src="./images/heart.svg" alt="Heart Rate">
+              <p>Heart Rate</p>
+              <p id="heart_rate"></p>
+              <div class="drop_down_container">
+                <i class="material-icons">arrow_drop_down</i>
+                <span id="heart_condition"></span>
+              </div>
+            </div>
+          </div>
+  
+        </aside>
+        <div class="diagnostic_list">
+          <h2>Diagnostic List</h2>
+        </div>
+      </div>
+      <aside class="top_right">
+        <div class="patient_info"></div>
+        <div class="lab_results"></div>
+      </aside>
+    </main>
+    <footer></footer>
+  </div>
+  <script type="module" src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>
