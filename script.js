@@ -303,3 +303,17 @@ function setPatientInfo(patientData) {
     </div>
   `;
 };
+
+function setLabResults(patientData) {
+  const labResults = document.querySelector(".lab_results");
+  const labResultsData = patientData.lab_results;
+
+  const labResultsTitle = document.createElement("h2");
+  labResultsTitle.innerText = "Lab Results";
+  labResultsTitle.classList.add("lab_results_title");
+  labResults.appendChild(labResultsTitle);
+
+  labResultsData.forEach(labResult => {
+    labResults.innerHTML += `<div class="lab_result_container"><p>${labResult}</p><img src="./images/download.svg" alt="download icon"/></div>`;
+  });
+};
