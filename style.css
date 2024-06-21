@@ -130,4 +130,17 @@ body {
   /* height: 90vh; */
 }
 
+aside {
+  margin: 10px 5px;
+}
+
+.top_left, .top_right {
+  width: 16rem;
+}
+
+.top_left {
+  background-color: #fff;
+  height: 132.5vh;
+}
+
 
