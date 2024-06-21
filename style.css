@@ -170,4 +170,26 @@ aside {
   width: 44rem;
 }
 
+.patients_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  opacity: 1;
+  margin: 5px;
+  width: 100%;
+}
+
+.patient {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+}
+
+.patient img {
+  width: 48px;
+  height: 48px;
+}
+
 
