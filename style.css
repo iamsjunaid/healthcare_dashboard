@@ -333,6 +333,16 @@ aside {
   align-items: center;
 }
 
+.diagnostic_list {
+  /* width: 100%; */
+  background-color: #fff;
+  height: 100%;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.diagnosis_table {
+
 
 
 
