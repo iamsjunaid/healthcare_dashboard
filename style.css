@@ -381,6 +381,68 @@ td {
   gap: 10px;
 }
 
+.lab_results ,.patient_info {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+}
+
+.patient_info_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.patient_info_section>img {
+  width: 96px;
+  height: 96px;
+}
+
+.patient_info_subsection{
+  width: 100%;
+}
+
+.dob_img_container,
+.gender_img_container,
+.contact_img_container,
+.emergency_img_container,
+.insurance_img_container
+{
+  display: flex;
+  gap: 16px;
+}
+
+.dob_container,
+.gender_container,
+.contact_container,
+.emergency_container,
+.insurance_container{
+  text-align: left;
+}
+
+.patient_info_btn{
+  padding: .5rem 1rem;
+  background-color: #01f0d0;
+  border: none;
+  border-radius: 16px;
+  margin: 14px 0;
+}
+
+.lab_result_container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lab_result_container > p {
+  font-size: 14px;
+}
+
+
 
 
 
