@@ -192,4 +192,23 @@ aside {
   height: 48px;
 }
 
+.patient_demographics {
+  margin-left: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.patient_demographics .name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.patient_demographics .gender {
+  text-align: left;
+  color: #707070;
+  font-size: smaller;
+  margin: 2px;
+}
+
+
 
